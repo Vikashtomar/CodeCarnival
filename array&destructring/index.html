@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array & Destructring...</h1>
+    <script>
+// Destructring = extract values from arrays and objects,
+// then assign them to variable in a convenient way
+// [] to perform array destructring
+// { } = to perform object destructing..
+
+// example 1
+// swap the  values of two variables
+
+        // let a =1;
+        // let b = 2;
+        // [a,b] = [b,a];
+        // console.log(a)
+        // console.log(b)
+
+        //example 2
+        // Swap 2 elements in an array
+
+        // let colors = ["red","green","blue","black","white"];
+        // [colors[0],colors[4]] = [colors[4],colors[0]]
+       
+
+        // const[first,second,third, ...extraColors] = colors;
+        // console.log(first)
+        // console.log(second)
+        // console.log(third)
+        // console.log(extraColors)
+
+        // example 3
+        // extract values from objects  = {}
+
+
+
+
+
+        let person1 = {
+            fName :"Amit",
+            lName: "shah",
+            age: 60,
+            job: "Goverment employee"
+        }
+        let  person2 ={
+            
+            fName :"Abhi",
+            lName: "raj",
+            age: 60,
+                }
+
+                // const {fName,lName,age,job="unemloyee"} = person2
+                // console.log(fName)
+                // console.log(lName)
+                // console.log(age)
+                // console.log(job)
+                displayPerson(person2)
+
+    function displayPerson({fName,lName,age,job="unemployee"}){
+        console.log(`name ${fName} ${lName} ${age} ${job}`);
+        
+    }
+
+    </script>
+    
+</body>
+</html>
