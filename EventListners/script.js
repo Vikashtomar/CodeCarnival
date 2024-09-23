@@ -1,8 +1,10 @@
 
         // approach 1
-// document.getElementById("myself").onclick = function(){
-//     alert("Vikash Tomar")
-// }
+document.getElementById("phone").onclick = function(e){
+    alert("phone clicked")
+    console.log(e)
+    
+}
 
 // approach 2
 // document.getElementById("myself").addEventListener("click", function(){
