@@ -1,26 +1,23 @@
-let form = document.querySelector("form")
+ let form = document.querySelector("form");
 
-
-
-form.addEventListener("submit",(e)=>{
+ form.addEventListener("submit",(e)=>{
     e.preventDefault()
-    let weightt = parseInt(document.querySelector("#weight").value)
-    const height = parseInt(document.getElementById("height").value)
-    const results = document.querySelector("#result")
-    console.log(results)
-    if(height === "", height >=0 || isNaN(height))
-    {
+    let height = parseInt(document.getElementById("height").value);
+    let weight  = parseInt(document.getElementById("weight").value);
+    const result = document.querySelector("#result");
+    console.log(result)
+
     
-        results.innerHTML = `height value ${height}`
+    if(isNaN(height) || height <=0){
+        result.innerHTML = `please give valid height ${height}`
     }
+    else if(isNaN(weight) || weight <=0)
+    {
+        result.innerHTML = `please give valid weight ${weight}`
 
-     else if(weightt === "", weightt <0 || isNaN(weightt))
-        {
-            results.innerHTML = `weight value ${weightt}`
-        }
-
-        else{
-            const bmi = (weightt / ((height * height)/ 10000)).toFixed(2);
-            results.innerHTML = `<h2>${bmi} </h2>`
-        }
-})
+    }
+    else{
+        const bmi = (weight / ((height * height)/10000)).toFixed(2);
+        result.innerHTML = `<span> ${bmi} </span>`;
+    }
+ });
