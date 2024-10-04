@@ -1,3 +1,6 @@
-let num = "number is Se"
 
-console.log(num)
+function randomNum(){
+
+    console.log(parseInt(Math.random() *10 +1))
+}
+
