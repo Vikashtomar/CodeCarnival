@@ -38,7 +38,7 @@
     }
     else {
         prevGuess.push(guess)
-        if(numGuess <= 10)
+        if(numGuess === 11)
         {
          displayGuess(guess)   
          displayMessage(`Game over Random number was ${randomNumber}`)
@@ -70,11 +70,14 @@ function checkGuess(guess){
     }
 }
 
+
+// clean up guess function
+
  function displayGuess(guess){
     userInput.value = "";
     guessSlot.innerHTML += `${guess}   `
     numGuess++;
-    remaining.innerHTML  =`${10 - numGuess}`
+    remaining.innerHTML  =`${11 - numGuess}`
  }
  
  function displayMessage(message){
