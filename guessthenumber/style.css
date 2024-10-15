@@ -65,3 +65,13 @@ p {
 span {
     font-weight: bold;
 }
+#newGame{
+    padding: 20px;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: orange;
+    width: 20%;
+    cursor: pointer 2s;
+
+    
+}
