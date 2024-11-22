@@ -55,7 +55,7 @@ const determineWinner = (userChoice, computerChoice) => {
         } else if (computerChoice === 'paper') {
             return "Congratulations, you won! Scissors beats paper.";
         }
-    }
+    } 
 };
 
 // Main game function
