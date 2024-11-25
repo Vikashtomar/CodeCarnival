@@ -3,13 +3,13 @@ const getUserChoice = (userInput) => {
     if (userInput === "rock" || userInput === "scissors" || userInput === "paper" || userInput === "bomb") {
         return userInput;
     } else {
-        console.log("Error: Please type only 'rock', 'scissors', 'paper', or 'bomb'");
+        console.log("Error: inme se koi 1 plzz 😊'rock', 'scissors', 'paper', or 'bomb'");
     }
 }
 
 // Function to get the computer's choice
 const getComputerChoice = () => {
-    const randomNum = Math.floor(Math.random() * 4); // Change to 4 to include bomb option
+    const randomNum = Math.floor(Math.random() * 4); // Change to 4 bomb option jeetgega hii
     switch (randomNum) {
         case 0:
             return 'rock';
