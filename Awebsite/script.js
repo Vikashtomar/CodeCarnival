@@ -11,12 +11,13 @@ let users = [
          icon:`<i class="ri-music-2-fill"></i>`,
          interest: "music",
       },
+   
       {
          icon: `<i class="ri-quill-pen-fill"></i>`,
          interest:"writing",
       }
    ],
-      bio: "Lorem ipsum, fuh , isdfosdhvdfoh uhfivho hvfih oyvidf ohioyfdd  ihbdfiuy",
+      bio: "Lorem ipsum, fuh , isdfosdhvdfoh uhfivj hvfih oyvidf ohioyfdd  ihbdfiuy",
       isFriend: null
 
    },
