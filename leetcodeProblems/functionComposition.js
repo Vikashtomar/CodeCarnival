@@ -18,3 +18,10 @@ let compose = function(functions) {
         return result;
     }
 };
+
+const add2 = (x) => x + 2;
+const multiply3 = (x) => x * 3;
+const subtract5 = (x) => x - 5;
+let composefunc = compose([add2,multiply3,subtract5])
+let resultt =  composefunc(5)
+console.log(resultt)
