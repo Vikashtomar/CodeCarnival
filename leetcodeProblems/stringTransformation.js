@@ -9,4 +9,4 @@
 
  let result = compose(square,addFive,double)(3);
 
- console.log(result)
+ console.log(result) 
