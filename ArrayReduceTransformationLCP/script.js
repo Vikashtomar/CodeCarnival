@@ -10,7 +10,7 @@ let addIntial =  function(nums,fn,init){
     let total = init;
     for(let i=0; i<nums.length; i++){ 
         if(fn(total,nums[i])){
-            total += nums[i];
+            total += nums[i];  
         }
     }
     return total;
