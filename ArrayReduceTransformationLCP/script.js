@@ -6,11 +6,11 @@
 
 // Please solve it without using the built-in Array.reduce method.
 
-let addIntial =  function(nums,fn,init){
+let addIntial =  function(nums,fn,init){ 
     let total = init;
-    for(let i=0; i<nums.length; i++){
+    for(let i=0; i<nums.length; i++){ 
         if(fn(total,nums[i])){
-            total += nums[i];
+            total += nums[i];  
         }
     }
     return total;
