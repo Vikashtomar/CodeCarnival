@@ -60,7 +60,7 @@ function addExpense() {
 }
 
 // Function to remove an expense
-function removeExpense(index) {
+function removeExpense(index) {  
   expenses.splice(index, 1); // Remove the expense from the array
   updateExpenseTable(); // Re-render the table
 }
