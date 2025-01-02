@@ -8,7 +8,7 @@ app.use(express.json());
 
 // Import and use the routes
 import userRoutes from './routes/userRoute.js';
-app.use('/api', userRoutes);
+app.use('/api/', userRoutes);
 
 // Sync models with database (create tables if they do not exist)
 db.sequelize.sync({ force: false })  // Set force: true to drop and recreate the tables on startup

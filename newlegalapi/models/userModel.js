@@ -25,6 +25,10 @@ const User = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
+    full_name:{
+      type: DataTypes.STRING,
+      allowNull:true
+    },
     vendor_id: {
       type: DataTypes.INTEGER,
       allowNull: true,

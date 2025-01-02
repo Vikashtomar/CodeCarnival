@@ -3,7 +3,7 @@ import User from '../models/userModel.js'; // Adjust based on your models setup
 
 // Add a new user
 export const addUser = async (req, res) => {
-  const { type, mpin, username, geo_location } = req.body;
+  const { type, mpin, username,full_name,geo_location } = req.body;
 
   try {
     // Check if the username already exists
@@ -18,16 +18,14 @@ export const addUser = async (req, res) => {
       mpin,
       username,
       geo_location,
+      full_name,
     });
+    console.log("line 16 User created",userData)
 
     // Optionally, update user with a vendor_id
     await userData.update({ vendor_id: userData.id });
 
-    res.status(201).json({
-      status: true,
-      message: "User added successfully.",
-      data: userData,
-    });
+    res.status(201).json({ status: true, message: "User added successfully.", data: userData, });
   } catch (error) {
     console.error("Error in addUser:", error.message);
     res.status(500).json({ status: false, error: error.message });
