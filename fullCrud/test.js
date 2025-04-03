@@ -39,6 +39,30 @@ export const getAllUsers = async (req,res) =>{
 
 export const getUserById = async (req,res)=>{
     try{
-        const {user,Post} = global.sequelize.models
+        const {User,Post} = global.sequelize.models;
+        const {id} = req.params;
+        
+        const user = await user.findByPk(id,{
+            include:[
+                {
+                    model: Post,
+                    as: "posts",
+                    attributes: ["id","title", "content", "createdAt"],
+                },
+            ],
+        });
+
+        if(!user){
+            return res.status(404).json({success: false, message: "user not found"})
+        }
+
+        res.status(200).json({success: true, data: user});
     }
-}
+    catch(error){
+        res.status(500).json({
+            success: false,
+            message: "Error fetching user",
+            error: error.message,
+        });
+    }
+};
