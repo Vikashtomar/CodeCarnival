@@ -5,6 +5,6 @@ let filter = function(arr,fn){
         if(fn(arr[i], i)){
             newarr.push(arr[i])
         }
-    }
+    } 
     return newarr
 };
