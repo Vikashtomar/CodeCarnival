@@ -91,7 +91,7 @@ let users = [
  }
 
  let curr = 0;
- let isAnimating = false;
+ let isAnimating = false; 
 
  function setData(ind){
    select(".prflimg img").src = users[ind].profilePic;

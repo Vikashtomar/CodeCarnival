@@ -66,3 +66,31 @@ export const getUserById = async (req,res)=>{
         });
     }
 };
+
+export const updateUser = async (req,res)=>{
+    try{
+        const {User} = global.sequelize.models;
+        const {id} = req.params;
+        const {name,email} = req.body;
+
+        const user = await User.findByPk(id);
+        if(!user){
+            return res.status(404).json({success: false, message: "User not found"});
+
+        }
+        await user.update({name, email});
+        res.status(200).json({success: true, data: user});
+    }  catch(error){
+        res.status(500).json({success: false, message: "Error in updating user", error: error})
+    }
+    
+};
+
+export const deleteUser = async (req,res)=>{
+    try {
+        const {User} = global.sequelize.models;
+        const {id} = req.params;
+        const user  = await User.findByPk(id);
+        // if(!)
+    }
+}
