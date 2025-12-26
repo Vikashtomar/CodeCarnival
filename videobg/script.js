@@ -16,3 +16,4 @@
     }
     console.log(isPalindrome("malayalam")); // true
     console.log(isPalindrome("hello")); // false
+    console.log(isPalindrome("darkGreen"))
