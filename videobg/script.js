@@ -6,3 +6,12 @@
         return `Hello, ${name}!`;
     }
     console.log(greet("Vikash"));
+
+
+    // palindrome check 
+       function isPalindrome(str) {
+        const cleanedStr = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+        const reversedStr = cleanedStr.split('').reverse().join('');
+        return cleanedStr === reversedStr;
+    }
+    console.log(isPalindrome("malayalam")); // true
