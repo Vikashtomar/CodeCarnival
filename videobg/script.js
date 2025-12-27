@@ -17,3 +17,10 @@
     console.log(isPalindrome("malayalam")); // true
     console.log(isPalindrome("hello")); // false
     console.log(isPalindrome("darkGreen"))
+
+    // reverse a number program
+    function reverseNumber(num) {
+        const reversedNum = parseFloat(num.toString().split('').reverse().join('')) * Math.sign(num);
+        return reversedNum;
+    }
+console.log(reverseNumber(543))
