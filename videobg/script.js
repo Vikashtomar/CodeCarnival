@@ -64,3 +64,9 @@ btn.classList.remove("pause");
  
 })
 
+// last 20 MINUTES CODE
+// function to toggle dark mode
+const dgmodeToggle = document.querySelector(".dark-mode-toggle");
+dgmodeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+}); 
