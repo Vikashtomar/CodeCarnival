@@ -1,2 +1,35 @@
-console.log("Welcome to My Page");
-console.log("This is a simple HTML document with a heading and a paragraph."); 
+//  <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+//     <link rel="stylesheet" href="style.css">
+//     <script src="script.js" defer></script>
+// </head>
+// <body>
+//     <div>
+//         <div class="box">
+//             <h1>Welcome to My Page</h1>
+//             <p>This is a simple HTML document with a heading and a paragraph.</p>
+//             <h3> +</h3>
+//             <h2>    -</h2>
+//         </div>
+//     </div>
+// </body>
+// </html>
+
+const plus = document.querySelector("h3");
+const minus = document.querySelector("h2");
+const p = document.querySelector("p");
+let count = 0;
+plus.addEventListener("click", () => {
+    count++;
+    p.innerText = count;
+}   );
+minus.addEventListener("click", () => {
+    count--;
+    p.innerText = count;
+}); 
+
+
