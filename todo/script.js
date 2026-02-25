@@ -23,3 +23,9 @@ function addTask() {
 
   taskInput.value = "";
 }
+
+taskInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    addTask();
+  }
+});
